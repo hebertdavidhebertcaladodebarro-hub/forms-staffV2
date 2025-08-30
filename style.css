@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4cc9f0;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.9);
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  transform: scale(1.02);
+  border: 2px solid #4cc9f0;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.btn {
+  background: #4cc9f0;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #4895ef;
+  transform: translateY(-2px);
+}
+
+.footer {
+  background: rgba(0,0,0,0.4);
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-top: auto;
+}
+
+.msg-sucesso {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #4cc9f0;
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+}
